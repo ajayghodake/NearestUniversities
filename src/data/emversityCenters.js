@@ -6,7 +6,7 @@ const emversityCenters = [
       "region": "South",
       "lat": 17.491659,
       "lon": 78.391983,
-      "address": "5th Floor, KKR Building, Pillar #867, Beside Balanagar Metro Station, Kukatpally, Hyderabad, Telangana - 500072"
+      "address": "5th Floor, KKR Building, Pillar #867, Beside Balanagar Metro Station, Kukatpally, Hyderabad, Telangana - 500072",
     },
     {
       "campus": "Nagpur - Dharampeth",

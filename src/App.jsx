@@ -156,7 +156,8 @@ export default function App() {
               {centerResults.map((center, index) => (
                 <div key={index}>
                   <li className="university-item">
-                    <strong>{center.campus}</strong>, State: {center.state},
+                  <strong className="universitiy_name">{center.university}</strong> — {" "}
+                     <strong>{center.campus}</strong>, State: {center.state},
                     Region: {center.region} -
                     <span className="distance">
                       {" "}
