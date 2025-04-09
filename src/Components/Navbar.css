@@ -24,3 +24,28 @@
     height: 100%;
   }
   
+
+  /* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+    .navbar {
+      padding: 16px 16px;
+    }
+  
+    .logo {
+      width: 180px;
+      margin-left: 40px;
+    }
+  }
+  
+  /* Mobile Devices (480px and below) */
+  @media screen and (max-width: 480px) {
+    .navbar {
+      padding: 12px 12px;
+    }
+  
+    .logo {
+      width: 150px;
+      margin-left: 0;
+    }
+  }
+  

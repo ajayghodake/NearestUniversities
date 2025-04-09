@@ -16,8 +16,7 @@ body {
 .container-wrapper {
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
-
+  align-items: center;
 }
 
 .container {
@@ -95,4 +94,69 @@ hr {
   border: none;
   border-top: 1px solid #ccc;
   margin: 8px 0;
+}
+
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+  .container-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 16px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 95%;
+    padding: 12px;
+  }
+}
+
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .input,
+  .button {
+    font-size: 0.95rem;
+  }
+
+  .distance {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Devices (480px and below) */
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .input,
+  .button {
+    font-size: 0.9rem;
+  }
+
+  .distance {
+    font-size: 0.8rem;
+  }
 }
