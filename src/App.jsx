@@ -52,17 +52,14 @@
 //         </div>
 //       )}
 
-
-      
 //     </div>
 //   );
 // }
 
-
-
 import React, { useState, useRef, useEffect } from "react";
 import { findNearestUniversities } from "./utils/findNearestUniversity";
 import { findNearestCenters } from "./utils/findNearestCenters";
+import Navbar from './Components/NavBar'
 import "./App.css";
 
 export default function App() {
@@ -93,8 +90,9 @@ export default function App() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="container-wrapper">
-
       {/* 🏫 University Finder Container */}
       <div className="container">
         <h2 className="title">EDGE - Find Nearest University</h2>
@@ -115,11 +113,17 @@ export default function App() {
         {uniResults.length > 0 && (
           <div className="result">
             <h2 className="subtitle">Top 3 Nearest Universities:</h2>
+            <hr />
             <ol className="university-list">
               {uniResults.map((uni, index) => (
                 <li key={index} className="university-item">
-                  <strong>{uni.name}</strong> in {uni.city}, State: {uni.state}, Region: {uni.region} —
-                  <span className="distance"> {uni.distance.toFixed(2)} km</span>
+                  <strong>{uni.name}</strong> in <strong>{uni.city}</strong>, State: {uni.state},
+                  Region: {uni.region} —
+                  <span className="distance">
+                    {" "}
+                    {uni.distance.toFixed(2)} km
+                  </span>
+                  {index < uniResults.length - 1 && <hr />}
                 </li>
               ))}
             </ol>
@@ -147,19 +151,27 @@ export default function App() {
         {centerResults.length > 0 && (
           <div className="result">
             <h2 className="subtitle">Top 3 Nearest Centers:</h2>
+            <hr />
             <ol className="university-list">
               {centerResults.map((center, index) => (
-                <li key={index} className="university-item">
-                  <strong>{center.campus}</strong> – {center.address}, State: {center.state}, Region: {center.region} —
-                  <span className="distance"> {center.distance.toFixed(2)} km</span>
-                </li>
+                <div key={index}>
+                  <li className="university-item">
+                    <strong>{center.campus}</strong>, State: {center.state},
+                    Region: {center.region} -
+                    <span className="distance">
+                      {" "}
+                      {center.distance.toFixed(2)} km
+                    </span>
+                  </li>
+                  {/* Add horizontal line between items except after the last one */}
+                  {index < centerResults.length - 1 && <hr />}
+                </div>
               ))}
             </ol>
           </div>
         )}
       </div>
-
     </div>
+    </>
   );
 }
-
