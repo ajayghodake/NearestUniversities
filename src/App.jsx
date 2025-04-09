@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { findNearestUniversities } from "./utils/findNearestUniversity";
 import "./App.css";
 
 export default function App() {
   const [city, setCity] = useState("");
   const [results, setResults] = useState([]);
+  const inputRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const nearest = await findNearestUniversities(city);
     setResults(nearest);
+    // setCity("");
+    inputRef.current?.focus();
   };
+
+useEffect(() => {
+  inputRef.current.focus();
+}, [])
 
   return (
     <div className="container">
@@ -22,6 +29,7 @@ export default function App() {
           placeholder="Enter your city or Pincode"
           value={city}
           onChange={(e) => setCity(e.target.value)}
+          ref={inputRef}
         />
         <button type="submit" className="button">
           Find Nearest
