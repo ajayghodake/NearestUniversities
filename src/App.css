@@ -22,13 +22,12 @@ body {
 .container {
   background: rgb(33, 33, 33);
   max-width: 500px;
-  /* margin: 40px auto; */
+  margin: 40px auto;
   margin: 40px 40px;
   padding: 20px;
   border-radius: 8px;
   border: 0.5px solid rgba(255, 255, 255, 0.073);
-  /* box-shadow: 4 20 10px rgba(255, 255, 255, 0.9); */
-  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.2);
+  box-shadow: 1px 1px 10px rgba(0, 152, 99, 0.2);
 }
 
 .title {
@@ -68,6 +67,7 @@ body {
   margin-top: 20px;
 }
 
+
 .subtitle {
   font-size: 1.2rem;
   font-weight: 600;
@@ -106,7 +106,7 @@ hr {
   }
 
   .container {
-    max-width: 90%;
+    max-width: 80%;
     margin: 20px auto;
     padding: 16px;
   }
@@ -115,7 +115,7 @@ hr {
 /* Mobile (480px and below) */
 @media screen and (max-width: 480px) {
   .container {
-    max-width: 95%;
+    max-width: 80%;
     padding: 12px;
   }
 }
