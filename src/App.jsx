@@ -1,40 +1,46 @@
-// src/App.jsx
 import React, { useState } from "react";
-import { findNearestUniversity } from "./utils/findNearestUniversity";
-import './App.css';
+import { findNearestUniversities } from "./utils/findNearestUniversity";
+import "./App.css";
+
 export default function App() {
   const [city, setCity] = useState("");
-  const [result, setResult] = useState(null);
+  const [results, setResults] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const nearest = await findNearestUniversity(city);
-    setResult(nearest);
+    const nearest = await findNearestUniversities(city);
+    setResults(nearest);
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto">
-      <h1 className="text-xl font-bold mb-4">Find Nearest University</h1>
-      <form onSubmit={handleSubmit} className="space-y-2">
+    <div className="container">
+      <h2 className="title">Find Nearest University for EDGE</h2>
+      <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
-          className="border p-2 w-full"
+          className="input"
           placeholder="Enter your city"
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded"
-        >
+        <button type="submit" className="button">
           Find Nearest
         </button>
       </form>
 
-      {result && (
-        <div className="mt-4">
-          <h2 className="text-lg font-semibold">Nearest University:</h2>
-          <p>{result.name} in {result.city}</p>
+      {results.length > 0 && (
+        <div className="result">
+          <h2 className="subtitle">Top 3 Nearest Universities:</h2>
+          <ol className="university-list">
+            {results.map((uni, index) => (
+              <li key={index} className="university-item">
+                <div>
+                  <strong>{uni.name}</strong> in {uni.city}, State: {uni.state}, Region: {uni.region} —
+                  <span className="distance"> {uni.distance.toFixed(2)} km</span>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       )}
     </div>
