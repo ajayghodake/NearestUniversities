@@ -42,11 +42,49 @@
 // }
 
 
+// import universities from "../data/universities";
+
+// function getDistance(lat1, lon1, lat2, lon2) {
+//   const toRad = angle => (angle * Math.PI) / 180;
+//   const R = 6371;
+
+//   const dLat = toRad(lat2 - lat1);
+//   const dLon = toRad(lon2 - lon1);
+
+//   const a =
+//     Math.sin(dLat / 2) ** 2 +
+//     Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+
+//   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+//   return R * c;
+// }
+
+// export async function findNearestUniversities(userCity) {
+//   const res = await fetch(
+//     `https://nominatim.openstreetmap.org/search?format=json&q=${userCity}`
+//   );
+//   const data = await res.json();
+
+//   if (!data.length) return [];
+
+//   const { lat, lon } = data[0];
+
+//   const results = universities.map(univ => ({
+//     ...univ,
+//     distance: getDistance(lat, lon, univ.lat, univ.lon),
+//   }));
+
+//   // Sort by distance and return top 3
+//   results.sort((a, b) => a.distance - b.distance);
+
+//   return results.slice(0, 3);
+// }
+
 import universities from "../data/universities";
 
 function getDistance(lat1, lon1, lat2, lon2) {
   const toRad = angle => (angle * Math.PI) / 180;
-  const R = 6371;
+  const R = 6371; // Earth's radius in km
 
   const dLat = toRad(lat2 - lat1);
   const dLon = toRad(lon2 - lon1);
@@ -74,7 +112,6 @@ export async function findNearestUniversities(userCity) {
     distance: getDistance(lat, lon, univ.lat, univ.lon),
   }));
 
-  // Sort by distance and return top 3
   results.sort((a, b) => a.distance - b.distance);
 
   return results.slice(0, 3);
