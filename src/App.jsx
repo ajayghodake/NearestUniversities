@@ -129,7 +129,7 @@ export default function App() {
 
       {/* 🏢 Center Finder Container */}
       <div className="container">
-        <h2 className="title">Find Nearest Emversity SMART Centers</h2>
+        <h2 className="title">Find Nearest SMART Centers</h2>
         <form onSubmit={handleCenterSubmit} className="form">
           <input
             type="text"
