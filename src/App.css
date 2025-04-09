@@ -104,7 +104,9 @@ hr {
     align-items: center;
     gap: 20px;
   }
-
+  .container-wrapper .container:first-child {
+    margin-top: 70px;
+  }
   .container {
     max-width: 80%;
     margin: 20px auto;
@@ -114,6 +116,9 @@ hr {
 
 /* Mobile (480px and below) */
 @media screen and (max-width: 480px) {
+  .container-wrapper .container:first-child {
+    margin-top: 70px;
+  }
   .container {
     max-width: 80%;
     padding: 12px;
