@@ -19,7 +19,7 @@ export default function App() {
         <input
           type="text"
           className="input"
-          placeholder="Enter your city"
+          placeholder="Enter your city or Pincode"
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
