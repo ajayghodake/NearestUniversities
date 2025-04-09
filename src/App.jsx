@@ -97,7 +97,7 @@ export default function App() {
 
       {/* 🏫 University Finder Container */}
       <div className="container">
-        <h2 className="title">Find Nearest University for EDGE</h2>
+        <h2 className="title">EDGE - Find Nearest University</h2>
         <form onSubmit={handleUniversitySubmit} className="form">
           <input
             type="text"
@@ -129,7 +129,7 @@ export default function App() {
 
       {/* 🏢 Center Finder Container */}
       <div className="container">
-        <h2 className="title">Find Nearest Centers for SMART</h2>
+        <h2 className="title">SMART - Find Nearest Centers</h2>
         <form onSubmit={handleCenterSubmit} className="form">
           <input
             type="text"
