@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./components/NavBar";
-import FinderContainer from "./Components/FinderContainer";
+import FinderContainer from "./components/FinderContainer";
 import universities from "./data/universities";
 import centers from "./data/emversityCenters";
 import BSFICenters from "./data/bsfiCenters";
