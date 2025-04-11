@@ -12,7 +12,8 @@ export default function App() {
       <Navbar />
       <div className="container-wrapper">
         <FinderContainer
-          title="BSc.Hon - Nearest University"
+          title="BSc.Hon"
+          place="Find Nearest University"
           placeholder="Enter your city or Pincode"
           dataset={universities}
           formatter={(uni) => (
@@ -25,7 +26,8 @@ export default function App() {
         />
 
         <FinderContainer
-          title="B.Voc - Find Nearest Centers"
+          title="B.Voc"
+          place="Find Nearest Centers"
           placeholder="Enter your city or Pincode"
           dataset={centers}
           formatter={(center) => (
@@ -39,7 +41,8 @@ export default function App() {
         />
 
         <FinderContainer
-          title="BBA - Find Nearest Centers"
+          title="BBA"
+          place="Find Nearest Centers"
           placeholder="Enter your city or Pincode"
           dataset={BSFICenters}
           formatter={(center) => (

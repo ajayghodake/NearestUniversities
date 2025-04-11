@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../App.css";
 
-export default function FinderContainer({ title, placeholder, dataset, formatter }) {
+export default function FinderContainer({ title, placeholder, dataset, formatter, place }) {
   const [city, setCity] = useState("");
   const [results, setResults] = useState([]);
   const inputRef = useRef(null);
@@ -21,6 +21,7 @@ export default function FinderContainer({ title, placeholder, dataset, formatter
   return (
     <div className="container">
       <h2 className="title">{title}</h2>
+      <p className="mainTitle">{place}</p>
       <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
