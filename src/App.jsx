@@ -1,7 +1,8 @@
 import React from "react";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/NavBar";
 import FinderContainer from "./components/FinderContainer";
+import Footer from "./components/Footer"
 import universities from "./data/universities";
 import centers from "./data/emversityCenters";
 import BSFICenters from "./data/bsfiCenters";
@@ -56,6 +57,7 @@ export default function App() {
           )}
         />
       </div>
+  <Footer/>
       <Analytics />
     </>
   );
