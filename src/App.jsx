@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from "./components/NavBar";
 import FinderContainer from "./components/FinderContainer";
 import universities from "./data/universities";
@@ -55,6 +56,7 @@ export default function App() {
           )}
         />
       </div>
+      <Analytics />
     </>
   );
 }
