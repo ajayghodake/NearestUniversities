@@ -2,7 +2,7 @@ import React from "react";
 import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/NavBar";
 import FinderContainer from "./components/FinderContainer";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 import universities from "./data/universities";
 import centers from "./data/emversityCenters";
 import BSFICenters from "./data/bsfiCenters";
@@ -34,9 +34,28 @@ export default function App() {
           dataset={centers}
           formatter={(center) => (
             <>
-              <strong className="universitiy_name">{center.university}</strong>{" "}
-              — <strong>{center.campus}</strong>, State: {center.state}, Region:{" "}
-              {center.region} —
+              {/* <div>
+                <strong>{center.campus}</strong>,
+              </div>
+              <strong>Address:</strong> {center.address}. —
+              <span className="distance"> {center.distance.toFixed(2)} km</span> */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: "2px"}}> 
+                <strong>{center.campus}</strong>&nbsp;
+                <button
+                  onClick={() => navigator.clipboard.writeText(center.address)}
+                  style={{
+                    marginLeft: "8px",
+                    padding: "4px 8px",
+                    fontSize: "0.7rem",
+                    cursor: "pointer",
+                    borderRadius: "4px",
+                    border: "none"
+                  }}
+                >
+                  Copy Address
+                </button>
+              </div>
+              <strong>Address:</strong> {center.address}. —
               <span className="distance"> {center.distance.toFixed(2)} km</span>
             </>
           )}
@@ -57,7 +76,7 @@ export default function App() {
           )}
         />
       </div>
-  <Footer/>
+      <Footer />
       <Analytics />
     </>
   );
