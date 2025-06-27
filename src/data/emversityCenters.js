@@ -85,7 +85,7 @@ const emversityCenters = [
     region: "North",
     lat: 26.912434,
     lon: 75.787271,
-    address: "Jaipur",
+    address: "Harshit Mansion, 79 & 81, Gautam Marg, Shivraj Niketan Colony, Vaishali Nagar, Jaipur, Rajasthan 302021",
   },
   {
     campus: "Srinagar",
