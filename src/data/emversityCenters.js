@@ -153,16 +153,7 @@ const emversityCenters = [
     lat: 22.719568,
     lon: 75.857727,
     address:
-      "Dharavi Depot Rd, H Block BKC, Dharavi, Mumbai, Maharashtra - 400017, Near Manohar Joshi College",
-  },
-  {
-    campus: "Thane",
-    state: "Maharashtra",
-    university: "Medhavi",
-    region: "West",
-    lat: 19.218331,
-    lon: 72.97809,
-    address: "Thane",
+      "NO.365, EE, Goyal Nagar, Scheme 94, Indore, Madhya Pradesh 452001, Adjacent Canara Bank",
   },
 ];
 
