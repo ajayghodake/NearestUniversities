@@ -19,16 +19,16 @@ const bsfi = [
     address:
       "Pune",
   },
-  {
-    campus: "Nashik",
-    state: "Maharashtra",
-    university: "Mangalayatan",
-    region: "East",
-    lat: 19.997454,
-    lon: 73.789803,
-    address:
-      "Nashik",
-  },
+  // {
+  //   campus: "Nashik",
+  //   state: "Maharashtra",
+  //   university: "Mangalayatan",
+  //   region: "East",
+  //   lat: 19.997454,
+  //   lon: 73.789803,
+  //   address:
+  //     "Nashik",
+  // },
   {
     campus: "Hubli",
     state: "Karnataka",

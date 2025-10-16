@@ -14,7 +14,7 @@ export default function App() {
       <Navbar />
       <div className="container-wrapper">
         <FinderContainer
-          title="BSc.Hon"
+          title="BSc.Hon Paramedical"
           place="Find Nearest University"
           placeholder="Enter your city or Pincode"
           dataset={universities}
@@ -28,7 +28,7 @@ export default function App() {
         />
 
         <FinderContainer
-          title="B.Voc"
+          title="B.Voc Paramedical"
           place="Find Nearest Centers"
           placeholder="Enter your city or Pincode"
           dataset={centers}
@@ -39,18 +39,18 @@ export default function App() {
               </div>
               <strong>Address:</strong> {center.address}. —
               <span className="distance"> {center.distance.toFixed(2)} km</span> */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: "2px"}}> 
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  margin: "2px",
+                }}
+              >
                 <strong>{center.campus}</strong>&nbsp;
                 <button
                   onClick={() => navigator.clipboard.writeText(center.address)}
-                  style={{
-                    marginLeft: "8px",
-                    padding: "4px 8px",
-                    fontSize: "0.7rem",
-                    cursor: "pointer",
-                    borderRadius: "4px",
-                    border: "none"
-                  }}
+                  className="copy-button"
                 >
                   Copy Address
                 </button>
@@ -62,14 +62,32 @@ export default function App() {
         />
 
         <FinderContainer
-          title="BBA"
+          title="BBA in Hotel Management"
           place="Find Nearest Centers"
           placeholder="Enter your city or Pincode"
           dataset={BSFICenters}
           formatter={(center) => (
             <>
-              <strong className="universitiy_name">{center.university}</strong>{" "}
-              — <strong>{center.campus}</strong>, State: {center.state}, Region:{" "}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  margin: "2px",
+                }}
+              >
+                <strong className="universitiy_name">
+                  {center.university}
+                </strong>{" "}
+                <button
+                  onClick={() => navigator.clipboard.writeText(center.address)}
+                  className="copy-button"
+                >
+                  Copy Address
+                </button>
+              </div>
+              <strong>Address:</strong> {center.address}. —
+              <strong>{center.campus}</strong>, State: {center.state}, Region:{" "}
               {center.region} —
               <span className="distance"> {center.distance.toFixed(2)} km</span>
             </>

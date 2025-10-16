@@ -124,7 +124,6 @@ const emversityCenters = [
     address:
       "Kohinoor B Zone Building, Beside Vijay Sales, Opposite City One Mall, Chinchwad, Old Mumbai - Pune Highway, Pune - 411019",
   },
-
   {
     campus: "Mumbai - Dharavi",
     state: "Maharashtra",
